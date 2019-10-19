@@ -4,21 +4,18 @@ import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LayoutModule } from './layout/layout.module';
-import { InputTextComponent } from './views/input-text/input-text.component';
-import { ApiSearchComponent } from './views/api-search/api-search.component';
-import { TableContentComponent } from './views/table-content/table-content.component';
+import { ViewsModule } from './views/views.module';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    InputTextComponent,
-    ApiSearchComponent,
-    TableContentComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     LayoutModule,
+    ViewsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

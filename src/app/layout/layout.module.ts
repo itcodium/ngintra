@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
-import { MenuComponent } from '../components/menu/menu.component';
+import { MenuComponent } from './menu/menu.component';
 import { RouterModule } from '@angular/router';
 
 

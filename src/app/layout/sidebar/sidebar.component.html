@@ -1,33 +1,24 @@
+<nav id="navBarContent" class="navbar navbar-expand-md bg-dark navbar-dark">
+    <a class="navbar-brand" href="#">navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <app-menu></app-menu>
+    </div>
+</nav>
+
 <div class="sidebar d-flex" id="wrapper">
     <div class="sidebar-header bg-light border-right" id="sidebar-wrapper">
         <div class="list-group list-group-flush">
             <ng-content select="sidebar-header"></ng-content>
         </div>
-
     </div>
-    <div id="page-content-wrapper">
-        <nav id="navBarContent" class="navbar navbar-expand-md bg-dark navbar-dark">
-            <!-- Brand -->
-            <a class="navbar-brand" href="#">navbar</a>
-
-            <!-- Toggler/collapsibe Button -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <!-- Navbar links -->
-            <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                <app-menu></app-menu>
-            </div>
-        </nav>
-        <div class="container-fluid">
-            <ng-content select="sidebar-body"></ng-content>
-        </div>
-
+    <div class="container-fluid p-2">
+        <ng-content select="sidebar-body"></ng-content>
     </div>
 </div>
 
-<!-- Menu Toggle Script -->
 <script>
     $("#menu-toggle").click(function (e) {
         e.preventDefault();
