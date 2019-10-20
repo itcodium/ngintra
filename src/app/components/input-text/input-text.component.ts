@@ -8,6 +8,7 @@ import { Component, OnInit, EventEmitter, Input, Output } from '@angular/core';
 export class InputTextComponent implements OnInit {
   @Input() value: string;
   @Input() buttontext: string;
+  @Input() placeHolder: string;
 
   @Output() submit = new EventEmitter<string>();
 
@@ -15,6 +16,7 @@ export class InputTextComponent implements OnInit {
 
   ngOnInit() {
     this.buttontext = this.buttontext ? this.buttontext : "Aceptar";
+    this.placeHolder = this.placeHolder ? this.placeHolder : "";
   }
 
   update(value: string) {

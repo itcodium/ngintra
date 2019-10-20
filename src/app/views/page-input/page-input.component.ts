@@ -15,4 +15,5 @@ export class PageInputComponent implements OnInit {
     this.value = data;
   }
 
+
 }

@@ -1,5 +1,5 @@
 <nav id="navBarContent" class="navbar navbar-expand-md bg-dark navbar-dark">
-    <a class="navbar-brand" href="#">navbar</a>
+    <a class="navbar-brand text-warning" href="#"><b>Ngintra</b></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -10,6 +10,7 @@
 
 <div class="sidebar d-flex" id="wrapper">
     <div class="sidebar-header bg-light border-right" id="sidebar-wrapper">
+        <h1 class="p-2 text-center text-danger">Ngintra</h1>
         <div class="list-group list-group-flush">
             <ng-content select="sidebar-header"></ng-content>
         </div>
@@ -18,10 +19,3 @@
         <ng-content select="sidebar-body"></ng-content>
     </div>
 </div>
-
-<script>
-    $("#menu-toggle").click(function (e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
-    });
-</script>

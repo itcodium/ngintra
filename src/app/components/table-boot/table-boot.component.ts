@@ -1,4 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
+
+class Column {
+  name: string;
+  visible: boolean;
+}
 
 @Component({
   selector: 'table-boot',
@@ -6,10 +12,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./table-boot.component.scss']
 })
 export class TableBootComponent implements OnInit {
+  @Input() columns: Column[];
+  @Input() data: object[];
 
-  constructor() { }
-
+  constructor(private sanitizer: DomSanitizer) {
+  }
   ngOnInit() {
+    this.columns = this.columns.filter(function (col) {
+      return col.visible == true;
+    });
+  }
+
+  getSantizeUrl(data: object, name: string) {
+    return this.sanitizer.bypassSecurityTrustUrl(data[name]);
   }
 
 }
